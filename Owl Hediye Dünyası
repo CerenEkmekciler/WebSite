@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Hediye Dünyası</title>
+<meta name="Description" content="Bu sayfa Owl Markasının Resmi Web Sitesidir."/>
+<meta name="Keywords" content="Owl, Marka, Hediye, Dünyası"/>
+<meta name="Copyright" content="2017-2020 Copyright| Owl"/>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<p>Hello World</p>
+<h1>H1 BAŞLIĞI</h1>
+<h2>H2 BAŞLIĞI</h2>
+<h3>H3 BAŞLIĞI</h3>
+<h4>H4 BAŞLIĞI</h4>
+<h5>H5 BAŞLIĞI</h5>
+<pre>Metnin içerisindeki tüm boşlukları ve satır sonlarının korunmasını sağlar.</pre>
+<abbr title="Yönetim Bilişim Sistemleri">YBS</abbr>
+<p>x<sub>2</sub></p>
+<p>x<sup>2</sup></p>
+<p>YBS</p>
+<p><b>YBS</b></p>
+<p><i>YBS</i></p>
+<p><strong>YBS</strong></p>
+<p><em>YBS</em></p>
+<p><q>Quote</q></p>
+<p>Rus yazar Dostoyevski'nin <cite>Suç ve Ceza</cite> 
+isimli kitabının ilk basımından bu zamana 140 yıldan 
+fazla zaman geçmiştir.</p>
+<p>JavaScript ile yeni bir pencere açmak için <code>window.open()</code> fonksiyonu kullanılır.</p>
+<p>Burası birinci satır.<br />Burası ikinci satır</p>
+</body>
+
+</html>
