@@ -1,0 +1,14 @@
+/* h1 {color:#fff666;
+} */
+
+*{background-color:#00ff66}
+#baslık{
+width:960px;
+height:102px;
+background-color:red;
+}
+.header{
+width:200px;
+height:100px;
+background-color:#fff777;
+}
