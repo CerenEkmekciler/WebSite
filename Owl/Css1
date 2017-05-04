@@ -1,0 +1,95 @@
+#body {
+
+}
+#container{
+width:960px;
+height:1000px; 
+margin:0; 
+padding:10px;
+background-color:#00FFFF;
+}
+#header {
+width:940px;
+background-color:#9966FF;
+height:100px;
+padding:10px;
+}
+#banner {
+padding:20px;
+height:55px;
+width:350px;
+background-color:#CC99FF;   
+}
+#menu {
+height:30px;
+width:920px;
+background-color:brown;
+margin:10px;
+padding:10px;
+}
+#content {
+width:940px; 
+height:700px;
+margin:0; 
+padding:10px;
+background-color:#CCFF99;
+}
+#yeniurunler {
+height:655px;
+width:550px;
+background-color:#660033;   
+float:left;
+padding:22px;
+}
+
+#gkampanya{
+height:350px;
+width:500px;
+background-color:#66FF66;
+float:left;
+margin:10px;
+padding:10px;
+}
+
+#indpro{
+height:150px;
+width:500px;
+background-color:yellow;
+float:left;
+margin:10px;
+padding:10px;
+}
+
+#videolar {
+height:655px;
+width:300px;
+background-color:#660033;   
+float:right;
+margin:5px;
+padding:17px;
+}
+
+#anavideo {
+height:205px;
+width:230px;
+background-color:yellow;   
+float:right;
+margin:5px;
+padding:17px;
+}
+
+#dvideolar {
+height:230px;
+width:200px;
+background-color:#66FF66;   
+float:right;
+margin:5px;
+padding:17px;
+}
+
+#footer {
+height:75px;
+width:940px;
+background-color:brown;
+margin:10px;
+}
