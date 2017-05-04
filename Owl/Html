@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hediye Dünyası</title>
+<meta name="Description" content="Bu sayfa Owl Markasının Resmi Web Sitesidir."/>
+<meta name="Keywords" content="Owl, Marka, Hediye, Dünyası"/>
+<meta name="Copyright" content="2017-2020 Copyright| Owl"/>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"/>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="container">
+<div id="header">
+<div id="banner"><h1>LOGO</h1></div>
+</div>
+<div id="menu">Menü|KADIN|ERKEK|ÇOCUK|</div>
+<div id="content">
+<div id="yeniurunler"><h3>Yeni Ürünler</h3>
+<div id="gkampanya"><h3>Güncel Kampanyalar</h3></div><br>
+<br><br>
+<div id="indpro"><h3>İndirim Promosyon</h3></div>
+</div>
+<div id="videolar"><h3>Videolar</h3>
+<div id="anavideo"><h3>Ana Video</h3></div><br>
+<div id="dvideolar"><h3>Diger Videolar</h3></div>
+</div>
+</div>
+<div id="footer">Footer</div>
+</div>
+</body>
+</html>
