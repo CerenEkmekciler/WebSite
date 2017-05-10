@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NewsYBS</title>
+<link href="ybshaber/style.css" rel="stylesheet"/>
+<meta name="Description" content="Bu sayfa DOkuz Eylül Üniversitesi Yönetim Bilişim Sistemleri Haber Web Sayfasıdır."/>
+<meta name="Keywords" content="Dokuz,Eylül,Üniversitesi,YBS,Haber"/>
+<meta name="Copyright" content="2015-2020 Copyright | DOkuz Eylül Üniversitesi"/>
+<link rel="stylesheet" href="css/style.css"/>
+<meta charset="UTF-8"/>
+
+</head>
+<body>
+<div>
+	<div id="container">
+		<div id="ustBanner">
+		<div id="solUstBanner"></div>
+		<div id="sagUstBanner"></div>
+	</div>
+<div id="banner">
+	<div id="solBanner">
+		<img id="logo" src="images/logo.png"/>
+		<div id="bannerInfo">
+			<img id="dollar" src="images/dollar.png"/>
+			<label class="yazi">Dolar:3.75</label/>
+			<img id="euro" src="images/euro.png"/>
+			<label class="yazi">Euro:4.01</label/>
+			<img id="gold" src="images/gold.png"/>
+			<label class="yazi">Altın:4.01</label/>
+			<img id="weather" src="images/weather.png"/>
+			<label class="yazi">Kahramanmaraş:25</label/>
+		</div>
+	</div>
+<div id="sagBanner"></div>
+</div>
+</div>
+</body>
+</html>
