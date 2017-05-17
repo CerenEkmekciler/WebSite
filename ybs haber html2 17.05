@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NewsYBS</title>
+<link href="webTasarimm/style.css" rel="stylesheet"/>
+<meta name="Description" content="Bu sayfa DOkuz Eylül Üniversitesi Yönetim Bilişim Sistemleri Haber Web Sayfasıdır."/>
+<meta name="Keywords" content="Dokuz,Eylül,Üniversitesi,YBS,Haber"/>
+<meta name="Copyright" content="2015-2020 Copyright | DOkuz Eylül Üniversitesi"/>
+<link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8"/>
+
+</head>
+<body>
+<div>
+	<div id="container">
+		<div id="ustBanner">
+		<div id="solUstBanner"></div>
+		<div id="sagUstBanner"></div>
+	</div>
+<div id="banner">
+	<div id="solBanner">
+		<img id="logo" src="images/logo.png"/>
+		<div id="bannerInfo">
+			<img id="dollar" src="images/dollar.png"/>
+			<label class="yazi">Dolar:3.75</label/>
+			<img id="euro" src="images/euro.png"/>
+			<label class="yazi">Euro:4.01</label/>
+			<img id="gold" src="images/gold.png"/>
+			<label class="yazi">Altın:4.01</label/>
+			<img id="weather" src="images/weather.png"/>
+			<label class="yazi">Kahramanmaraş:25</label/>
+		</div>
+	</div>
+<div id="sagBanner">
+<select id="kategori">
+	<option>Kategori Seçin</option>
+	<option>Bilim</option>
+	<option>Sanat</option>
+	<option>Kültür</option>
+	</select>
+	<input id="aranacak" type="text" value="Aranacak Kelime"/>
+	<img id ="search" src="images/search.png"/>
+	<img id="date" src="images/date.png"/>
+	<label id="tarih">17.05.2016</label>
+</div>
+	
+</div>
+<div id="menu">
+	<ul>
+	<li>Anasayfa</li>
+	<li>Güncel Haber</li>
+	<li>Siyaset</li>
+	<li>Spor</li>
+	<li>Dünya</li>
+	<li>Ekonomi</li>
+	<li>Sanat</li>
+	<li>Edebiyat</li>
+	<li>Sinema</li>
+	<li>Tiyatro</li>
+	<li>Diyet</li>
+	<li>Fikstür</li>
+	<li>Bilim</li>
+	</ul>
+	
+	
+</div>
+</div>
+</div>
+</body>
+</html>
