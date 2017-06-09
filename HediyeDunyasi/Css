@@ -1,0 +1,365 @@
+#container{
+width:960px;
+height:1000px; 
+margin:0 auto; 
+}
+#ustBanner{
+	width:960px;
+	height:42px;
+}
+#solUstBanner{
+	width:640px;
+	height:30px;
+	background-color:#b6f7e1;
+	float:left;
+}
+
+#inst{
+	width:20px;
+	height:20px;
+	float:left;
+	padding-right:10px;
+	margin-top:4px;
+}
+
+#twit{
+	width:20px;
+	height:20px;
+	float:left;
+	padding-right:10px;
+	margin-top:4px;
+}
+
+
+#anasayfa{
+	width:20px;
+	height:20px;
+	float:left;
+	padding-right:10px;
+	margin-top:4px;
+}
+#subeler{
+	width:20px;
+	height:20px;
+	float:left;
+	padding-right:10px;
+	margin-top:4px;
+
+}
+
+#kargo{
+	width:20px;
+	height:20px;
+	float:left;
+	padding-right:10px;
+	margin-top:4px;
+}
+
+#iletisim{
+	width:20px;
+	height:20px;
+	float:left;
+	padding-right:10px;
+	margin-top:4px;
+}
+
+#sagUstBanner{
+	width:320px;
+	height:42px;
+	background-color:#b6f7e1;
+	float:left;
+}
+#banner {
+height:96px;
+width:960px;  
+}
+
+#logo{
+	width:150px;
+	height:150px;
+	float:left;
+	padding:20px;
+}
+#bannerInfo{
+	width:443px;
+	float:left;
+   background-color:#fff
+}
+#aranacak{
+	width:100px;
+	color:grey;
+	border:none;
+	font-style:italic;
+	float:left;
+	padding-left:171px;
+}
+
+#search{
+	width:20px;
+	height:20px;
+	padding-left:10px;
+}
+
+#user{
+	width:20px;
+	height:20px;
+	padding-left:290px;
+}
+
+#sepetim{
+	width:30px;
+	height:19px;
+	padding-left:270px;
+}
+#sagBanner{
+	width:360px;
+	float:left;
+	padding-top:9px;
+}
+
+#face{
+	width:5px;
+	height:5px;
+}
+#maskot{
+	width:350px;
+	height:170px;
+	float:left;
+	margin:5px;
+	padding-left:380px;
+}
+
+#menu{
+	width:640px;
+	height:40px;
+	background-color:#b6f7e1;
+	margin-top:150px;
+	
+}
+
+#menuListe{
+	padding-top:8px;
+}
+
+.menuListeli{
+	display:inline;
+	color:#0809fe;
+	font-size:12px;
+	padding-left:1px;
+}
+
+a:link { color:#000;text-decoration:none}
+a:visited {color:#39F;text-decoration:none}
+a:active {color:#fff;}
+
+
+#sagMenu{
+	width:300px;
+	height:40px;
+	background-color:#b6f7e1;
+	margin-top:0;
+	font-size:15px;
+	float:right;
+	
+}
+
+ul{
+	list-style:none outside none;
+	padding-top:10px;
+}
+
+li{
+	position:relative;
+	display:inline;
+	color:#ffb976;
+	margin:7px;
+	font-family:Harrington;
+}
+
+li:hover{
+	background-color:white;
+}
+
+#content {
+width:940px; 
+height:700px;
+margin:0; 
+padding:10px;
+background-color:#fff;
+}
+
+#yeniurunler{
+height:655px;
+width:550px;
+background-color:white;   
+float:left;
+padding:22px;
+}
+
+
+
+#gkampanya{
+ position: relative;
+ width: 550px;
+ height: 350px;
+ margin: 20px 10px;
+ background: #0809fe;
+ border-radius: 50% / 10%;
+ background-color:#F4A460;
+ text-align: center;
+ text-indent: .1em;
+}
+
+
+#gkampanya img {
+ height:60%;
+ width:70%;
+ margin-top:60px;
+ margin-right:5px;
+}
+
+#sagOk{
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 20px solid #b6f7e1;
+	border-bottom: 10px solid transparent;
+	float:right;
+	margin-right:10px;
+	margin-top:160px;
+}
+
+
+#solOk{
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 20px solid #b6f7e1;
+	border-bottom: 10px solid transparent;
+	float:left;
+	margin-left:10px;
+	margin-top:160px;
+	
+}
+}
+
+#icerik{
+	height:350px;
+	width:500px;
+	margin-top:20px;
+}
+
+#baslik{
+	height:45px;
+	width:210px;
+}
+
+#indpro{
+height:215px;
+width:215px;
+background-color:white;
+float:left;
+margin-left:30px;
+padding-top:30px;
+margin-top:70px;
+}
+
+#indirim{
+	height:220px;
+	width:190px;
+	padding-top:30px;
+}
+
+
+#promosyon{
+	height:220px;
+	width:190px;
+	margin-top:30px;
+}
+
+#pro{
+height:275px;
+width:215px;
+background-color:white;
+float:right;
+margin-top:100px;
+}
+
+#videolar {
+height:640px;
+width:250px;
+background-color:#fff;   
+float:right;
+margin:5px;
+padding:5px;
+}
+
+#bannerInfo{
+height:10px;
+width:20px;
+margin-top:10px;
+}
+
+#anavideo {
+height:180px;
+width:250px;
+background-color:#b6f7e1;   
+float:right;
+margin:5px;
+padding:17px;
+}
+
+#video{
+height:170px;
+width:225px;
+margin:10px;
+
+}
+
+#dvideolar {
+height:230px;
+width:250px;
+background-color:#b6f7e1;   
+float:right;
+margin-top:50px;
+padding:17px;
+}
+
+#video2{
+	height:100px;
+	width:100px;
+	padding-top:10px;
+}
+
+#video3{
+	height:100px;
+	width:100px;
+	padding-left:45px;
+}
+
+#video4{
+	height:100px;
+	width:100px;
+	padding-right:45px;
+}
+
+#video5{
+	height:100px;
+	width:100px;
+}
+
+#bannerInfo2{
+	height:20px;
+	width:100px;
+	padding-top:20px;
+	float:left;
+	font-size:15px;
+}
+
+
+#footer {
+height:55px;
+width:940px;
+background-color:white;
+margin-top:230px;
+}
