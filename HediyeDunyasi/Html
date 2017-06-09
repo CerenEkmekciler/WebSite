@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hediye Dünyası</title>
+<meta name="Description" content="Bu sayfa Owl Markasının Resmi Web Sitesidir."/>
+<meta name="Keywords" content="Owl, Marka, Hediye, Dünyası"/>
+<meta name="Copyright" content="2017-2020 Copyright| Owl"/>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div>
+<div id="container">
+		<div id="ustBanner">
+		<div id="solUstBanner">
+			<img id="twit" src="images/twitter.png" alt="kus"/>
+			<img id="inst" src="images/instagram.png" alt="foto"/>
+			<img id="anasayfa" src="images/home.png" alt="ev"/>
+			<img id="subeler" src="images/location.png" alt="sube"/>
+			<img id="kargo" src="images/truck.png" alt="kamyon"/>
+			<img id="iletisim" src="images/letter.png" alt="mektup"/>
+		</div>
+		<div id="sagUstBanner">
+			<img id="user" src="images/user.png" alt="admin"/>
+			<img id="sepetim" src="images/basket.png" alt="sepet"/>
+		</div>
+	</div>
+<div id="banner">
+	<div id="solBanner">
+		<img id="logo" src="images/logo.png" alt="owl"/>
+		<div id="bannerInfo">
+			<input id="aranacak" type="text" value="Aranacak Kelimeyi Giriniz"/>
+			<img id ="search" src="images/search.png" alt="arama"/>
+		</div>
+	<div id="sagBanner">
+		<img id="maskot" src="images/hedBaykus.png" alt="owls"/>
+	</div>
+</div>
+</div>
+<div id="menu">
+	<ul id="menuListe">
+		<li class="menuListeli"><a href="index.html">ANASAYFA</a></li>
+		<li class="menuListeli"><a href="kadin.html">KADIN</a></li>
+		<li class="menuListeli"><a href="erkek.html">ERKEK</a></li>
+		<li class="menuListeli"><a href="cocuk.html">ÇOCUK</a></li>
+		<li class="menuListeli"><a href="genc.html">GENÇ</a></li>
+		<li class="menuListeli"><a href="kampanyalar.html">KAMPANYALAR</a></li>
+		<li class="menuListeli"><a href="ozelgunler.html">ÖZEL GÜNLER</a></li>
+		<li class="menuListeli"><a href="ev.html">EV</a></li>
+		<li class="menuListeli"><a href="is.html">İS</a></li>
+	</ul>
+		
+</div>
+<div id="sagMenu"></div>
+<div id="content">
+	<div id="yeniurunler">
+	<div id="gkampanya">
+		<img id="gkampanyaimg" src="images/gift.jpg" alt="kutular"/>
+		<div id="sagOk"></div>
+		<div id="solOk"></div>
+	</div>
+<div id="indpro">
+	<ul>
+		<li>Kisiye Özel Tasarımlar</li>
+	</ul>	
+<img id="indirim" src="images/indirim.jpg" alt="hazırlama"/>
+</div>
+<div id="pro">
+	<ul>
+		<li>Promosyonlar</li>
+	</ul>
+<img id="promosyon" src="images/kot.jpg" alt="robot"/>
+</div>
+</div>
+<div id="videolar">
+	<ul>
+		<li>VİDEOLAR</li>
+	</ul>
+	<img id="altCizgi" src="images/bannerınfo.png" alt="cizgi"/>
+<div id="anavideo">
+	<img id="video" src="images/video1.png" alt="hediye"/>
+</div>
+<div id="dvideolar">
+	<img id="video2" src="images/video1.png" alt="yapımı"/>
+	<img id="video3" src="images/video1.png" alt="emek"/>
+	<img id="video4" src="images/video1.png" alt="hazırlama"/>
+	<img id="video5" src="images/video1.png" alt="yapım"/>
+</div>
+	<div id="bannerInfo2">
+		<ul>
+			<li> Devamı...</li>
+		</ul>
+	</div>
+</div>
+</div>
+
+<div id="footer">
+	<ul>
+		<li>Gizlik Sözlesmesi  |</li>
+		<li>İletisim  |</li>
+		<li>Hakkında  |</li>
+		<li>Ödeme Kosuları  |</li>
+		<li>Tüm hakları saklıdır  |</li>
+		<li>Copyright2017  |</li>
+		
+	</ul>
+	</div>
+</div>
+</div>
+
+</body>
+</html>
