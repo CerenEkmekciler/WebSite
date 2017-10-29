@@ -1,0 +1,24 @@
+import bs4 as bs
+import urllib.request
+
+kaynak=urllib.request.urlopen('https://www.uzumler.gen.tr/uzum-hangi-bolgede-yetisir.html').read()
+sayfa=bs.BeautifulSoup(kaynak,'lxml')
+
+profilBilgi = sayfa.find('div', {"class" : "ortametin"})
+print(profilBilgi)
+
+###########################################################################################
+
+import bs4 as bs
+import urllib.request
+
+kaynak=urllib.request.urlopen('http://www.trthaber.com/haber/ekonomi/aliaga-turkiyenin-ihracat-kapisi-izmir-limanini-solladi-328278.html').read()
+sayfa=bs.BeautifulSoup(kaynak,'lxml')
+
+#for paragraf in sayfa.findAll('p'):
+    #print(paragraf.string)
+
+
+
+profilBilgi = sayfa.find('div', {"class" : "editorPart blackle"}).findAll('p')
+print(profilBilgi)
