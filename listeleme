@@ -1,0 +1,19 @@
+import requests
+
+from bs4 import BeautifulSoup
+
+url = "https://www.ntv.com.tr/teknoloji/calisanlarimizin-yarisini-robotlarla-degistirebiliriz,2NEyXrZMg0-iFY0fRrRp3w"
+
+tumkelimeler = []
+
+r = requests.get(url)
+
+soup = BeautifulSoup(r.content,"html.parser")
+
+for kelimegruplari in soup.find_all("p"):
+    icerik = kelimegruplari.text
+    kelimeler = icerik.lower().split()
+
+    for kelime in kelimeler:
+        tumkelimeler.append(kelime)
+        print(kelime)
