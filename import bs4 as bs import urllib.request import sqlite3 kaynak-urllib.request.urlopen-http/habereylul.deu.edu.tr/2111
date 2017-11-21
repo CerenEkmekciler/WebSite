@@ -1,0 +1,40 @@
+import bs4 as bs
+import urllib.request
+import sqlite3
+kaynak=urllib.request.urlopen('http://habereylul.deu.edu.tr/').read()
+sayfa=bs.BeautifulSoup(kaynak,'lxml')
+
+baglanti=sqlite3.connect('ogrenciler.db')
+isaretci=baglanti.cursor()
+
+#isaretci.execute('''CREATE TABLE haberler (id INTEGER PRIMARY KEY, haber VARCHAR(255)''')
+
+
+sayac=0
+linkler=sayfa.findAll('h3')
+for link in linkler:
+     haber=link.get_text('title')
+     isaretci.execute('''INSERT INTO haberler VALUES (?,?) ''',(haber))
+     sayac=sayac+1
+     sorgu=isaretci.execute('SELECT * FROM haberler')
+     print(sorgu.fetchall())
+
+
+
+   
+bu kod cektiğin veriyi veritabanına yazıyor
+
+sayac=0
+linkler=sayfa.findAll('h3')
+for link in linkler:
+     haber=link.get_text('title')
+     sorgu=isaretci.execute('SELECT * FROM haberler WHERE haber=',haber)
+     if(len(sorgu<0):
+        isaretci.execute('''INSERT INTO haberler VALUES (?,?) ''',(haber))
+        sayac=sayac+1
+    else:
+        print('Haber Mevcut)
+
+
+
+bu kodlarlada tekrarlayan verileri ifle tekrarlanmasını sağlıyor 
