@@ -1,0 +1,81 @@
+from PyQt4.QtGui import *
+from PyQt4.QtCore import *
+import smtplib
+import requests
+from bs4 import BeautifulSoup
+import bs4 as bs
+import urllib.request
+
+imdburl = "http://www.imdb.com/chart/top"
+
+r = requests.get(imdburl)
+
+soup = BeautifulSoup(r.content,"html.parser")#lxmlde olur
+
+gelen_veri = soup.find_all("table",{"class": "chart full-width"})
+
+filmtablosu = (gelen_veri[0].contents)[len(gelen_veri[0].contents)-2]
+
+filmtablosu = filmtablosu.find_all("tr")
+
+for film in filmtablosu:
+    filmbasliklari = film.find_all("td",{"class":"titleColumn"})
+    filmismi = filmbasliklari[0].text
+    filmismi = filmismi.replace("\n","")
+    
+
+    print(filmismi)
+    print("******************")
+
+ 
+class MailGonderme(QDialog):
+    def __init__(self, parent=None):
+        super(MailGonderme, self).__init__(parent)
+ 
+        self.gad = QLabel('Gönderen:')
+        self.alici = QLabel('Alıcı:')
+        self.konu = QLabel('Konu:')
+        self.mesaj = QLabel('İçerik:')
+ 
+        self.gadi = QLineEdit()
+        self.alicii = QLineEdit()
+        self.mkonu = QLineEdit()
+        self.micerik = QLineEdit()
+         
+        self.gonder = QPushButton('Gönder')
+        self.connect(self.gonder, SIGNAL('pressed()'), self.mailAt)
+ 
+        izgara = QGridLayout()
+        izgara.addWidget(self.gad, 0, 0,)
+        izgara.addWidget(self.alici, 1, 0,)
+        izgara.addWidget(self.konu, 2, 0,)
+        izgara.addWidget(self.mesaj, 3, 0,)
+         
+        izgara.addWidget(self.gadi, 0, 1,)
+        izgara.addWidget(self.alicii, 1, 1,)
+        izgara.addWidget(self.mkonu, 2, 1,)
+        izgara.addWidget(self.micerik, 3, 1,)
+ 
+        izgara.addWidget(self.gonder, 4, 1,)
+ 
+        self.setLayout(izgara)
+        self.setWindowTitle('MailGonderme')
+       
+             
+ 
+    def mailAt(self):
+        gonder = filmismi
+        mail = smtplib.SMTP("smtp.gmail.com",587)
+        mail.ehlo()
+        mail.starttls()
+        mail.login("ekmekcilercerenn@gmail.com","1481718072013")
+        mail.sendmail("ekmekcilercerenn@gmail.com","ekmekcilercerenn@gmail.com",gonder)
+        
+        
+            
+ 
+uygulama = QApplication([])
+pencere = MailGonderme()
+pencere.show()
+uygulama.exec_()
+
