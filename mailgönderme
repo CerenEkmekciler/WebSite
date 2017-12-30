@@ -68,8 +68,8 @@ class MailGonderme(QDialog):
         mail = smtplib.SMTP("smtp.gmail.com",587)
         mail.ehlo()
         mail.starttls()
-        mail.login("ekmekcilercerenn@gmail.com","1481718072013")
-        mail.sendmail("ekmekcilercerenn@gmail.com","ekmekcilercerenn@gmail.com",gonder)
+        mail.login("gönderecekmail","password")
+        mail.sendmail("gönderecekmail","alıcımail",gonder)
         
         
             
