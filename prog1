@@ -1,0 +1,68 @@
+ #### Bu kodlar adam başı ciro hesaplar
+    
+    
+    def adam_basiciroHesapla(x,y) :
+    adambasiciro =(x*y)/25
+    print("Adam Başı Cironuz =",adambasiciro)
+
+while True:
+    x= float(input("Satış miktarını giriniz: "))
+    y = float(input("Birim satış fiyatını giriniz: "))
+    adam_basiciroHesapla(x,y)
+    
+    
+    
+## Bu kodlar gelir ve giderleri kullanıcıdan alarak işletmenin kar-zararını hesaplar.
+def kar_zararHesapla(a,s):
+    b =(a-s)
+    print("Çıktınız =",b)
+    
+def TgelirHesapla(x,y,z):
+    a=(x+y+z)
+    print("Toplam Geliriniz =",a)
+
+def TgiderHesapla(m,n,k,l,v):
+    s=(m+n+k+l+v)
+    print("Toplam Gideriniz =",s)
+
+while True:
+    x= float(input("Finansman gelirini giriniz: "))
+    y= float(input("Pazar gelirini giriniz: "))
+    z= float(input("Kira gelirini giriniz: "))
+    m= float(input("Ücreti giriniz: "))
+    n= float(input("Finansman giderini giriniz: "))
+    k = float(input("Pazar giderini giriniz: "))
+    l = float(input("Kira giderini giriniz: "))
+    v = float(input("Muhasebe giderini giriniz: "))
+    TgelirHesapla(x,y,z)
+    TgiderHesapla(m,n,k,l,v)
+    kar_zararHesapla(a,s)
+    
+    
+    
+  #### Bu kodlar işletmenin oee oranını hesaplar 
+    
+
+def k_bilirHesapla(a,b) :
+    kullan = (a-b)/a
+    print("Kullanabilirlik Oranı =",kullan)
+
+def perfHesapla(a,b,c,d):
+    performans = (c*d)/(a-b)
+    print("Performans Oranı =",performans)
+
+def kaliteHesapla(e,f):
+    kalite = (e/f)
+    print ("Kalite Oranı =",kalite)
+
+
+a = float(input("Planlanmış üretim süresini giriniz:"))
+b = float(input("Plansız duruşu giriniz:"))
+c = float(input("Standart çevrim zamanını giriniz:"))
+d = float(input("Üretim miktarını giriniz:"))
+e = float(input("Sağlam ürün miktarını giriniz:"))
+f = float(input("üretim miktarını giriniz:"))
+
+k_bilirHesapla(a,b)
+perfHesapla(a,b,c,d)
+kaliteHesapla(e,f)
