@@ -1,0 +1,146 @@
+####################Bu kodlar bir mobilya şirketine ait Ortalam Stok değerini hesaplamaktadır.###################
+
+def dbsHesapla(kS,yS,dS):
+    global dbS
+    dbS=kS+yS+dS
+    return dbS
+
+
+def dssHesapla(kS,yS,dS):
+    global dsS
+    kS=kS-25+10
+    yS=yS-20+10
+    dS=dS-10+5
+    dsS=kS+yS+dS
+    return dsS
+
+def ortStokHesapla(dbS,dsS):
+    ortStok=(dbS+dsS)/2
+    print("Yıllık Ortalama Stok değeriniz:",ortStok)
+
+
+kS=int(input("Koltuk Sayınızı Giriniz:"))
+yS=int(input("Yatak Sayınızı Giriniz:"))
+dS=int(input("Dolap sayınızı Giriniz:"))
+
+dbsHesapla(kS,yS,dS)
+dssHesapla(kS,yS,dS)
+ortStokHesapla(dbS,dsS)
+
+
+####################Bu kodlar bir işletmenin müşterilerle çalışma süresini hesaplamaktadır.######################## 
+
+
+def eskimcalHesapla(cS,tM):
+    global emustericalSuresi
+    emustericalSuresi=(cS)/(tM)
+    return emustericalSuresi
+def ymcalHesapla(cS,tM):
+    global ymustericalSuresi
+    calisilanSure=cS+50
+    topMusSay=tM+20
+    ymustericalSuresi=(calisilanSure)/(topMusSay)
+    return ymustericalSuresi
+def mustericalfarkHesapla(emustericalSuresi,ymustericalSuresi):
+    fark=ymustericalSuresi-emustericalSuresi
+    print("2016 ve 2017 yıllarındaki Müşteri Çalışma Süreleri Arasındaki Farkınız:",fark)
+
+cS=int(input("Çalışılan Süre:"))
+tM=int(input("Toplam MÜşteri Sayısı:"))
+
+eskimcalHesapla(cS,tM)
+ymcalHesapla(cS,tM)
+mustericalfarkHesapla(emustericalSuresi,ymustericalSuresi)
+
+
+###################Bu kodlar bir işletmenin ilk ve son 6 aylık gelir-giderlerine göre işletme karını fonksiyon kullanarak hesaplar###################
+
+def itgHesapla(iyG,ifG,iusG):
+    global itopGelir
+    itopGelir=iyG+ifG+iusG
+    return itopGelir
+
+def itopgiderHesapla(icmG,ikG,idmG):
+    global itopGider
+    itopGider=icmG+ikG+idmG
+    return itopGider
+
+def stopgelirHesapla(syG,ssG,setG,susG):
+    global stopgelir
+    stopgelir=syG+ssG+setG+susG
+    return stopgelir
+
+def stopgiderHesapla(scmG,skG,sbmG):
+    global stopgider
+    stopgider=scmG+skG+sbmG
+    return stopgider
+
+def iikHesapla(itopGelir,itopGider):
+    global iikari
+    iikari=itopGelir-itopGider
+    print("İlk dönem karınız:",iikari)
+
+def sonikar(stopgelir,stopgider):
+    global sonikari
+    sonikari=stopgelir-stopgider
+    print("Son dönem karınız:",sonikari)
+
+def farkAL(iikari,sonikari):
+    fark=sonikari-iikari
+    if(fark>5000):
+        print("İşletmeniz çok karlı. Kar= ",fark)
+    elif(fark>=1000) and (fark<=5000):
+        print("İşletmenizin Karı Normal. Kar= ",fark)
+    else:
+        print("Üzgünüm İşletmeniz Yeterince Karda Değil")
+
+
+
+
+iyG=int(input("İlk altı aylık yazılım gelirinizi yazınız:"))
+ifG=int(input("İlk altı aylık finansman gelirinizi yazınız:"))
+iusG=int(input("İlk altı aylık ürün satış gelirinizi yazınız:"))
+icmG=int(input("İlk altı aylık çalışan maaşları giderinizi yazınız:"))
+ikG=int(input("İlk altı aylık kira giderinizi yazınız:"))
+idmG=int(input("İlk altı aylık donanım maliyetinizi yazınız:"))
+syG=int(input("Son altı aylık yazılım gelirinizi yazınız:"))
+ssG=int(input("Son altı aylık sponsorluk gelirinizi yazınız:"))
+setG=int(input("Son altı aylık e-ticaret gelirinizi yazınız:"))
+susG=int(input("Son altı aylık ürün satış gelirinizi yazınız:"))
+scmG=int(input("Son altı aylık çalışan maaşları giderinizi yazınız:"))
+skG=int(input("Son altı aylık kira giderinizi yazınız:"))
+sbmG=int(input("Son altı aylık bakım maliyetinizi yazınız:"))
+
+
+itgHesapla(iyG,ifG,iusG)
+itopgiderHesapla(icmG,ikG,idmG)
+stopgelirHesapla(syG,ssG,setG,susG)
+stopgiderHesapla(scmG,skG,sbmG)
+iikHesapla(itopGelir,itopGider)
+sonikar(stopgelir,stopgider)
+farkAL(iikari,sonikari)
+
+
+
+########################Bu kodlar bir firmanın katma değer cirosunu fonksiyon kullanarak hesaplar.########################
+
+def ciroHesapla(toplamsatMiktar,hammaddeMaliyet,bakımOnarım,sevkiyatGider,satınAlHiz):
+    katmadegerCiro=toplamsatMiktar-(hammaddeMaliyet+bakımOnarım+sevkiyatGider+satınalHiz)
+    print(katmadegerCiro)
+    if(katmadegerCiro>=1000):
+        print("İşletmenizin Katma Değer Cirosu Yüksek")
+    elif(katmadegerCiro>=500) and (katmadegerCiro<999):
+        print("İşletmenizin Katma Değer Cirosu Normal")
+    else:
+        print("İşletmenizin Katma Değer Cirosu Düşük")
+        
+
+print("Lütfen Katma Değer Cironuzu Hesaplayabilmem İçin Gerekli Değerleri Giriniz")
+
+toplamsatMiktar=int(input("Toplam Satış Miktarını Giriniz:"))
+hammaddeMaliyet=int(input("Hammadde Maliyetinizi Giriniz:"))
+bakımOnarım=int(input("Bakım Onarım Giderlerinizi Giriniz:"))
+sevkiyatGider=int(input("Sevkiyat Giderlerinizi Giriniz:"))
+satınalHiz=int(input("Satın Alınan Hizmet Giderlerinizi Giriniz:"))
+
+ciroHesapla(toplamsatMiktar,hammaddeMaliyet,bakımOnarım,sevkiyatGider,satınalHiz)
