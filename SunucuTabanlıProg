@@ -1,0 +1,60 @@
+Bu kodlar giriş formunda "hotmail" ya da "gmail" uzantısı ile giriş yapan kişilerin seçimlerine göre farklı sayfalara yönlendirmektedir. 
+###############baglanti.php#################
+
+<?php
+
+$i=$_POST["hotmail"];
+
+
+if ($i=="hotmail") {
+	header("location:ue.php");
+} else {
+	header("location:oys.php");
+	
+	
+}
+
+	
+	
+?>
+
+########################ue.php###################
+<?php
+
+echo "UZAKTAN EĞİTİM SİTESİNE HOŞGELDİNİZ"
+
+?>
+
+
+################oys.php#####################
+
+<?php
+
+echo "OYS SİSTEMİNE HOŞGELDİNİZ"
+
+?>
+
+##################### gf.php###################
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Uzaktan Eğitim</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+<form class="form-signin" action="baglanti.php" method="POST">
+<h2 class="form-signin-heading"	>Giriş Formu</h2>
+<label>Kullanıcı Adı:</label><input type="text" name="adi"><br>
+<label>Şifreniz::</label><input type="password" name="password"	class="form-control"><br>
+<label>hotmail ya da gmail yazınız:</label>
+<input type="text" name="hotmail" size='20'>
+<button type="submit" class="btn btn-lg btn-danger	btn-block">Gönder</button>
+	
+</form>
+</div>
+</body>
+</html>
