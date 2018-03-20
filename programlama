@@ -1,0 +1,72 @@
+#########################5.soru##########################
+
+
+def oranHesapla(pantolon):
+    global oran
+    oran=(pantolon*20)/100
+    print(oran)
+    if (girilen>oran):
+        print ("!!!!!!!!!!!UYARI!!!!!!!!!!!")
+    
+       
+    
+    
+girilen=int(input("DEFOLU ÜRÜN SAYISINI GİRİNİZ:"))
+pantolon=int(input("Pantolon SAYISINI GİRİNİZ:"))
+oranHesapla (pantolon)
+    
+
+toplam = 0
+while(True):
+    sayi = int(input("Yeni Defo sayınızı girin: "))
+    if sayi == 0: break
+    toplam += sayi
+print ("Toplam Defo Sayısı = ",toplam)
+    
+
+##########################4.soru#########################
+
+i=0
+while(i<22):
+    i=int(input("Aylık mesai saatini giriniz:"))
+    if (i>=22):
+        print("ÜZGÜNÜM!! Aylık 22 den fazla mesai saati giremezsiniz") 
+    else:
+        i=50*i*9
+        print("50 personele ödenecek toplam tutar:",i)
+
+
+
+####################3.soru###############################
+
+toplam = 0
+while(True):
+    sayi = int(input("sayı giriniz: "))
+    kalan=sayi%3
+    if sayi == 0: break
+    toplam += kalan
+print ("Toplam= ",toplam)          
+
+
+########################2.soru#########################
+
+i=5000
+while(i<10000):
+    print("inin değerleri",i)
+    i+=400
+
+########################1.Soru##########################
+
+def ciroHesapla (sMik,bSat):
+    ciro=sMik*bSat
+    while(ciro <= 500000):
+        sMik=sMik+200
+        bSat=bSat+20
+        ciro=ciro=sMik*bSat
+        print(ciro)
+
+
+
+sMik=500
+bSat=20
+ciroHesapla (sMik,bSat)
