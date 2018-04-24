@@ -1,0 +1,220 @@
+######################3.soru############################
+
+def beHesapla(x,y,z,m,n):
+    be=((x+y+z)/m/n)*100
+    print("YBS-1 GRUBUNUN ETKİLEŞİM ORANI=",be)
+    if(be>0.20):
+        print("YBS-1 GRUBUNUN ETKİLEŞİM ORANI BAŞARILIII!!")
+    else:
+        print("YBS-1 GRUBUNUN ETKİLEŞİM ORANI BAŞARISIZ!!")
+    
+def ieHesapla(k,a,b,c,d):
+    ie=((k+a+b)/c/d)*100
+    print("YBS-2 GRUBUNUN ETKİLEŞİM ORANI=",ie)
+    if(ie>0.20):
+        print("YBS-2 GRUBUNUN ETKİLEŞİM ORANI BAŞARILIII!!")
+    else:
+        print("YBS-2 GRUBUNUN ETKİLEŞİM ORANI BAŞARISIZ!!")
+
+def ueHesapla(e,f,g,h,l):
+    ue=((e+f+g)/h/l)*100
+    print("YBS-3 GRUBUNUN ETKİLEŞİM ORANI =",ue)
+    if(ue>0.20):
+        print("YBS-3 GRUBUNUN ETKİLEŞİM ORANI BAŞARILIII!!")
+    else:
+        print("YBS-3 GRUBUNUN ETKİLEŞİM ORANI BAŞARISIIZ!!")
+
+x= float(input("YBS-1 grubunun beğeni sayısını giriniz: "))
+y= float(input("YBS-1 grubunun yorum sayısını giriniz: "))
+z= float(input("YBS-1 grubunun paylaşım sayısını giriniz: "))
+m= float(input("YBS-1 grubunun içerik sayısını giriniz: "))
+n= float(input("YBS-1 grubunun takipçi sayısını giriniz: "))
+k = float(input("YBS-2 grubunun beğeni sayısını giriniz: "))
+a= float(input("YBS-2 grubunun yorum sayısını giriniz: "))
+b= float(input("YBS-2 grubunun paylaşım sayısını giriniz: "))
+c= float(input("YBS-2 grubunun içerik sayısını giriniz: "))
+d= float(input("YBS-2 grubunun takipçi sayısını giriniz: "))
+e= float(input("YBS-3 grubunun beğeni sayısını giriniz: "))
+f= float(input("YBS-3 grubunun yorum sayısını giriniz: "))
+g= float(input("YBS-3 grubunun paylaşım sayısını giriniz: "))
+h= float(input("YBS-3 grubunun içerik sayısını giriniz: "))
+l= float(input("YBS-3 grubunun takipçi sayısını giriniz: "))
+
+
+
+beHesapla(x,y,z,m,n)
+ieHesapla(k,a,b,c,d)
+ueHesapla(e,f,g,h,l)
+
+
+######################################### modülün çağırılması
+import modul3
+
+modul3.beHesapla(x,y,z,m,n)
+modul3.ieHesapla(k,a,b,c,d)
+modul3.ueHesapla(e,f,g,h,l)
+
+###########################2.soru#####################################
+def donenHesapla(kh,ach,bh,ash,tmh):
+    global donenVarlik
+    donenVarlik=kh+ach+bh+ash+tmh
+    return donenVarlik
+
+def duranHesapla(bih,th,dh):
+    global duranVarlik
+    duranVarlik=bih+th+dh
+    return duranVarlik
+
+def kvykHesapla(bkh,sh):
+    global kvyk
+    kvyk=bkh+sh
+    return kvyk
+
+def uvykHesapla(bkh,bsh):
+    global uvyk
+    uvyk=bkh+bsh
+    return uvyk
+
+def atoplam(donenVarlik,duranVarlik):
+    global atoplam
+    atoplam=donenVarlik+duranVarlik
+    print("Aktif Toplamınız:",atoplam)
+
+def ptoplam(kvyk,uvyk,ok):
+    global ptoplam
+    ptoplam=kvyk+uvyk+ok
+    print("Pasif Toplamınız:",ptoplam)
+
+def farkAL(atoplam,ptoplam):
+    fark=ptoplam-atoplam
+    if(fark==0):
+        print("Kapanış bilançosu doğru hesaplanmıştır",fark)
+    else:
+        print("Bilanço yanlış hesaplanmıştır")
+
+
+
+
+kh=int(input("Kasa hesabınızı yazınız:"))
+ach=int(input("Alınan çekler hesabınızı yazınız:"))
+bh=int(input("Bankalar hesabınızı yazınız:"))
+ash=int(input("Alınan senetler hesabınızı yazınız:"))
+tmh=int(input("Ticari mallar hesabınızı yazınız:"))
+bih=int(input("Binalar hesabınızı yazınız:"))
+th=int(input("Taşıtlar hesabınızı yazınız:"))
+dh=int(input("Demirbaş hesabınızı yazınız:"))
+bkh=int(input("Banka kredileri hesabınızı yazınız:"))
+sh=int(input("Satıcılar hesabınızı yazınız:"))
+bkh=int(input("Banka kredileri hesabınızı yazınız:"))
+bsh=int(input("Borç senetleri hesabınızı yazınız:"))
+sh=int(input("Sermaye hesabınızı yazınız:"))
+ok=int(input("Öz sermayeyi yazınız:"))
+
+
+donenHesapla(kh,ach,bh,ash,tmh)
+duranHesapla(bih,th,dh)
+kvykHesapla(bkh,sh)
+uvykHesapla(bkh,bsh)
+atoplam(donenVarlik,duranVarlik)
+ptoplam(kvyk,uvyk,ok)
+farkAL(atoplam,ptoplam)
+
+###########################################modülün çağırılması
+import modul2
+
+modul2.donenHesapla(kh,ach,bh,ash,tmh)
+modul2.duranHesapla(bih,th,dh)
+modul2.kvykHesapla(bkh,sh)
+modul2.uvykHesapla(bkh,bsh)
+modul2.atoplam(donenVarlik,duranVarlik)
+modul2.ptoplam(kvyk,uvyk,ok)
+modul2.farkAL(atoplam,ptoplam)
+
+
+##################################1.soru##################
+
+def itgHesapla(iyG,ifG,iusG):
+    global itopGelir
+    itopGelir=iyG+ifG+iusG
+    return itopGelir
+
+def itopgiderHesapla(icmG,ikG,idmG):
+    global itopGider
+    itopGider=icmG+ikG+idmG
+    return itopGider
+
+def stopgelirHesapla(syG,ssG,setG,susG):
+    global stopgelir
+    stopgelir=syG+ssG+setG+susG
+    return stopgelir
+
+def stopgiderHesapla(scmG,skG,sbmG):
+    global stopgider
+    stopgider=scmG+skG+sbmG
+    return stopgider
+
+def iikHesapla(itopGelir,itopGider):
+    global iikari
+    iikari=itopGelir-itopGider
+    print("İlk dönem karınız:",iikari)
+
+def sonikar(stopgelir,stopgider):
+    global sonikari
+    sonikari=stopgelir-stopgider
+    print("Son dönem karınız:",sonikari)
+
+def farkAL(iikari,sonikari):
+    fark=sonikari-iikari
+    if(fark>5000):
+        print("İşletmeniz çok karlı. Kar= ",fark)
+    elif(fark>=1000) and (fark<=5000):
+        print("İşletmenizin Karı Normal. Kar= ",fark)
+    else:
+        print("Üzgünüm İşletmeniz Yeterince Karda Değil")
+
+
+
+
+iyG=int(input("İlk altı aylık yazılım gelirinizi yazınız:"))
+ifG=int(input("İlk altı aylık finansman gelirinizi yazınız:"))
+iusG=int(input("İlk altı aylık ürün satış gelirinizi yazınız:"))
+icmG=int(input("İlk altı aylık çalışan maaşları giderinizi yazınız:"))
+ikG=int(input("İlk altı aylık kira giderinizi yazınız:"))
+idmG=int(input("İlk altı aylık donanım maliyetinizi yazınız:"))
+syG=int(input("Son altı aylık yazılım gelirinizi yazınız:"))
+ssG=int(input("Son altı aylık sponsorluk gelirinizi yazınız:"))
+setG=int(input("Son altı aylık e-ticaret gelirinizi yazınız:"))
+susG=int(input("Son altı aylık ürün satış gelirinizi yazınız:"))
+scmG=int(input("Son altı aylık çalışan maaşları giderinizi yazınız:"))
+skG=int(input("Son altı aylık kira giderinizi yazınız:"))
+sbmG=int(input("Son altı aylık bakım maliyetinizi yazınız:"))
+itgHesapla(iyG,ifG,iusG)
+itopgiderHesapla(icmG,ikG,idmG)
+stopgelirHesapla(syG,ssG,setG,susG)
+stopgiderHesapla(scmG,skG,sbmG)
+iikHesapla(itopGelir,itopGider)
+sonikar(stopgelir,stopgider)
+farkAL(iikari,sonikari)
+
+def adam_basiciroHesapla(x,y) :
+    adambasiciro =(x*y)/25
+    print("Adam Başı Cironuz =",adambasiciro)
+
+
+x= float(input("Satış miktarını giriniz: "))
+y = float(input("Birim satış fiyatını giriniz: "))
+adam_basiciroHesapla(x,y)
+
+################################ modülün çağırılması
+import modul1
+
+modul1.adam_basiciroHesapla(x,y)
+modul1.itgHesapla(iyG,ifG,iusG)
+modul1.itopgiderHesapla(icmG,ikG,idmG)
+modul1.stopgelirHesapla(syG,ssG,setG,susG)
+modul1.stopgiderHesapla(scmG,skG,sbmG)
+modul1.iikHesapla(itopGelir,itopGider)
+modul1.sonikar(stopgelir,stopgider)
+modul1.farkAL(iikari,sonikari)
+
+
