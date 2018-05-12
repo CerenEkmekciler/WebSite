@@ -1,0 +1,290 @@
+set.html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+	$("#p1").text("Hello World");
+	$("#p2").html("<b>Hello World</b>")
+	$("#input").val("ybs");
+});	
+});
+</script>
+</head>
+<body>
+<p id="p1">paragraf 1</p>
+<p id="p2">paragraf 2</p>
+
+<input type="text" id="input" value="iibf"/>
+
+<button id="btn1">Set Text</button>
+<button id="btn2">Set HTML</button>
+<button id="btn3">Set Value</button>
+</body>
+</html>
+
+########################################################
+script.js
+
+//var fruits=["Elma","Armut","Karpuz","Kavun"];
+//fruits.push("Kiraz");#pushla ekledim
+//fruit.pop();//son elemanı çıkarıyor.
+//fruits[0]="Avokado";//0.elemanı avokado yapıyor elmayı çıkarıyor
+//fruits.unshift("Kivi");// diğer elemanları kaydırıp en başa ekleyiupr
+//var i;
+//var fruit=document.getElementById("yazi");//İDSİ YAZI OLAN ELEMANI ÇEKTİK O OBJEYİ DEĞİŞKENE ATTIK
+//for(i=0;i<fruits.length;i++){document.getElementById("yazi").innerHTML+=fruits[i];//FRUİT İÇİNDEKİ HER BİR ELEMANI 5 OLANA KADAR ARTTIR İDSİ YAZI OLAN ELEMANI DEĞİŞKENE ATTIM
+
+
+
+
+/*
+var d=new Date();
+var saat=d.getHours();
+alert(saat);
+if(saat>18){
+	document.getElementById("yazi").innerHTML="İyi Akşamlar";
+}else{
+	document.getElementById("yazi").innerHTML="İyi Günler";
+}
+*/
+
+/*
+var tarih=new Date();
+var gun=tarih.getDay();
+alert(gun);
+if(gun==0){
+document.getElementById("yazi").innerHTML="Pazar";
+}else if(gun==1){
+document.getElementById("yazi").innerHTML="Pazartesi";
+}else if(gun==2){
+document.getElementById("yazi").innerHTML="Salı";
+}else if(gun==3){
+document.getElementById("yazi").innerHTML="Çarşamba";
+}else if(gun==4){
+document.getElementById("yazi").innerHTML="Perşembe";
+}else if(gun==5){
+document.getElementById("yazi").innerHTML="Cuma";
+}else{
+document.getElementById("yazi").innerHTML="Cumartesi";
+}
+
+*/
+/*
+var day=document.getElementById("yazi");
+switch(new Date().getDay()){
+case 0:
+day.innerHTML="Pazar";
+break;
+case 1:
+day.innerHTML="Pazartesi";
+break;
+case 2:
+day.innerHTML="Salı";
+break;
+case 3:
+day.innerHTML="Çarşamba";
+break;
+case 4:
+day.innerHTML="Perşembe";
+break;
+case 5:
+day.innerHTML="Cuma";
+break;
+case 6:
+day.innerHTML="Cumartesi";
+break;
+}
+*/
+
+var i=0;
+do{
+	document.getElementById("yazi").innerHTML+=i;
+	i++;
+	//önce yapcağını yazıyon sonra şartı yazzıyorsun farkı o do whilen
+}
+while(i<10)
+#################################################################################3
+post.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#gndr").click(function(){
+		var kullanici_adi=$("#kullanici").val();
+		var sifre=$("#sifre").val();
+		$.post("gonderilen.php",{
+			kullanici_gonder:kullanici_adi,
+			sifre_gonder:sifre
+		},
+		function(gonderilenVeri){
+			$("#sonuc").html(gonderilenVeri)
+		}
+		
+		)
+	});	
+});
+</script>
+</head>
+<body>
+<input type="text" id="kullanici"/>
+<input type="password" id="sifre"/>
+<button id="gndr">Gönder</button>
+<div id="sonuc">Gönderilen Sonuçlar</div>
+</body>
+</html>
+
+$############################################################
+gonderilen.php
+remove.html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+	$("#p1").remove();
+
+});
+$("#btn2").click(function(){
+	$("ol").remove();
+
+});
+});
+</script>
+</head>
+<body>
+<p id="p1">paragraf 1</p>
+<p id="p2">paragraf 2</p>
+<ol>
+<li id="liste">Maliye</li>
+<li>İktisat</li>
+<li>YBS</li>
+</ol>
+<button id="btn1">Paragraf kaldır</button>
+<button id="btn2">Liste kaldır</button>
+</body>
+</html>
+
+
+#######################################################
+<?php
+$gelen_kullanici=$_POST["kullanici_gonder"];
+$gelen_sifre=$_POST["sifre_gonder"];
+echo $gelen_kullanici;
+echo "<br>";
+echo $gelen_sifre;
+
+?>
+
+###############################################
+callback.html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#gizle").click(function(){
+	$("#par").hide("slow",function(){
+	alert("paragraf gizlendi");
+	});
+});
+});
+</script>
+</head>
+<body>
+<button id="gizle">Gizle</button>
+<p id="par">paragraf</p>
+</body>
+</html>
+##############################################
+attr.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#link").attr({
+				"href":"https://www.hurriyet.com.tr",
+				"title":"hurriyet site"
+		});
+	});	
+});
+</script>
+</head>
+<body>
+<a href="http://www.google.com.tr" id="link">Linke tıkla</a>
+
+<button>Değişiklik yap</button>
+</body>
+</html>
+######################################################################
+append.html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#p1").append("<p>ek paragraf</p>")
+});
+$("#btn2").click(function(){
+$("ol").append("<li>İşletme</li>")
+});
+});
+</script>
+</head>
+<body>
+<p id="p1">paragraf 1</p>
+<p id="p2">paragraf 2</p>
+<ol>
+<li>Maliye</li>
+<li>İktisat</li>
+<li>YBS</li>
+</ol>
+<button id="btn1">Metin ekle</button>
+<button id="btn2">Liste ekle</button>
+</body>
+</html>
+
+########################################################################################
+cssozellik.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("p").css("background-color","red");
+	});	
+});
+</script>
+</head>
+<body>
+<p>paragraf</p>
+<p>paragraf 2</p>
+<button>Değişiklik yap</button>
+</body>
+</html>
+#################################################################################
