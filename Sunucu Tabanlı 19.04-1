@@ -1,0 +1,87 @@
+var fruits=["Elma","Armut","Karpuz","Kavun"];
+fruits.push("Kiraz"); //push:eklemek
+fruits.pop(); //array'in son elemanını çıkarmak
+fruits.push("Avokado");
+fruits.unshift("Kivi");
+var i;
+var fruit=document.getElementById("yazi");
+for (i=0;i<fruits.length;i++){
+	fruit.innerHTML+=fruits[i];
+}
+
+
+################################################################################
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+</head>
+<body>
+<div id="yazi"></div>
+</body>
+<script src="script.js"></script>
+</html>
+
+##############################################################################
+
+var d=new Date();
+var saat=d.getHours();
+alert(saat);
+if(saat>18){
+	document.getElementById("yazi").innerHTML="İyi akşamlar";
+}else{
+	document.getElementById("yazi").innerHTML="İyi günler";
+}
+
+################################################################################
+var tarih=new Date();
+var gun=tarih.getDay();
+alert(gun)
+if(gun==0){
+	document.getElementById("yazi").innerHTML="Pazar";
+}else if(gun==1){
+	document.getElementById("yazi").innerHTML="Pazartesi";
+}else if(gun==2){
+	document.getElementById("yazi").innerHTML="Sali";
+}else if(gun==3){
+	document.getElementById("yazi").innerHTML="Cars";
+}else if(gun==4){
+	document.getElementById("yazi").innerHTML="Pers";
+}else if(gun==5){
+	document.getElementById("yazi").innerHTML="Cuma";
+}else{
+	document.getElementById("yazi").innerHTML="Cts";
+}
+####################################################################################
+var day=document.getElementById("yazi");
+switch(new Date().getDay()){
+	case 0:
+	day.innerHTML="Pazar";
+	break;
+	case 1:
+	day.innerHTML="pts";
+	break;
+	case 2:
+	day.innerHTML="sali";
+	break;
+	case 3:
+	day.innerHTML="cars";
+	break;
+	case 4:
+	day.innerHTML="pers";
+	break;
+	case 5:
+	day.innerHTML="cuma";
+	break;
+	case 6:
+	day.innerHTML="cts";
+	break;
+}
+######################################################################################
+
+var i=0;
+do{
+	document.getElementById("yazi").innerHTML+=i;i++;
+}
+while(i<10)
