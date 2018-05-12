@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+var=arr=["VW","Renault"];
+leng=arr.length;
+for(i=0;i<arr.length;i++)
+{
+
+}
+//document.getElementById("ad").innerHTML="Adınız:";
+var obj=document.getElementById("ad");
+obj.innerHTML="Adınız:";
+//obj.length="5";
+
+
+var firstname="Ceren";
+var lastname="EKMEKÇİLER";
+obj.innerHTML=firstname+" "+lastname;// burda pythondaki gibi fullname=lastname+firstname yapmadık yavaşlatmasın diye
+</script> 
+</html>
+
+
+
+
+
+
+JQUERY
+İçin jquery internet sitesindeiki sıkıştırılmamışları notepadde jquery.jsp olarak kaydet
+TIKLA BUTONU
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+<script src="jquery.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+	$(this).hide();
+});
+
+});
+
+</script>
+</head>
+<body>
+<button>Tıkla</button>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+Divi kaybetmek
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+<script src="jquery.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+	$("#div1").hide();
+});
+
+});
+
+</script>
+<style type="text/css">
+#div1{
+	background-color:red;
+	height:100px;
+	width:100px;
+}
+</style>
+</head>
+<body>
+<div id="div1">YBS</div>
+<button>Tıkla</button>
+</body>
+
+</html>
+İd yerine class
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+<script src="jquery.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+	$(".div1").hide();
+});
+
+});
+
+</script>
+<style type="text/css">
+.div1{
+	background-color:red;
+	height:100px;
+	width:100px;
+}
+</style>
+</head>
+<body>
+<div class="div1">YBS</div>
+<button>Tıkla</button>
+</body>
+
+</html>
+Divin rengini değiştirme
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+<script src="jquery.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+	$(".div1").css("background-color","yellow");
+});
+
+});
+
+</script>
+<style type="text/css">
+.div1{
+	background-color:red;
+	height:100px;
+	width:100px;
+}
+</style>
+</head>
+<body>
+<div class="div1">YBS</div>
+<button>Tıkla</button>
+</body>
+
+</html>
+
+Lütfen adınızı  giriniz uyarısı
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+<script src="jquery.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+	$(".div").hover(function(){
+		alert("Dikkat Et:");
+	
+	});
+	
+	
+	$("#txt1").mouseleave(function(){
+		alert("Lütfen Adınızı Giriniz:");
+	});
+	
+	$("button").click(function(){
+		$(".div1").css("background-color","yellow");
+	});
+});
+
+</script>
+<style type="text/css">
+.div1{
+	background-color:red;
+	height:100px;
+	width:200px;
+}
+</style>
+</head>
+<body>
+<div class="div1">
+<input type="text" id="txt1">
+</div>
+
+<button>Tıkla</button>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GÖSTER GİZLE
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+<script src="jquery.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+	$(".div").show();
+		
+	
+	});
+	
+	
+	$("#txt1").mouseleave(function(){
+		alert("Lütfen Adınızı Giriniz:");
+	});
+	
+	$("button").click(function(){
+		$(".div1").hide();
+	});
+});
+
+</script>
+<style type="text/css">
+.div1{
+	background-color:red;
+	height:100px;
+	width:200px;
+}
+</style>
+</head>
+<body>
+<div class="div1">
+</div>
+<button>göster</button>
+<button>gizle</button>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yavaşça kaymak
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+<script src="jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+$("#gonder").click(function(){
+$(".div1").hide("slow");
+$("#hosgeldiniz").show();
+
+});
+})
+</script>
+<style type="text/css">
+#hosgeldiniz{
+display:none;
+}
+.div1{
+background-color:red;
+height:100px;
+width:200px;
+}
+</style>
+</head>
+<body>
+<label id="hosgeldiniz">Hoşgeldiniz</label>
+<div class="div1">
+<label>Adınız</label>
+<input type="text">
+<label>Parola</label>
+<input type="text">
+<button id="gonder">Gönder</button>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hatalı
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yönetim Bilişim Sistemleri</title>
+<script src="jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+	$("#gonder").click(function(){
+//$(".div1").hide("slow");
+		$(".div").animate({heigh:'250px',width:'300px',opacity:'0.5'});
+	});
+})
+
+</script>
+<style type="text/css">
+#hosgeldiniz{
+display:none;
+}
+.div1{
+background-color:red;
+height:100px;
+width:200px;
+
+}
+</style>
+</head>
+<body>
+<label id="hosgeldiniz">Hoşgeldiniz</label>
+<div class="div1">
+<label>Adınız</label>
+<input type="text">
+<label>Parola</label>
+<input type="text">
+<button id="gonder">Gönder</button>
+</div>
+
+
+</body>
+</html>
